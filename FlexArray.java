@@ -1,4 +1,5 @@
-package javaapplication7;
+package FLEXARRAY;
+
 
 public class FlexArray {
         
@@ -122,12 +123,3 @@ public class FlexArray {
         }
     }
 }   
-
-  
-
-    
-
-
-    
- 
-

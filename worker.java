@@ -1,4 +1,4 @@
-package javaapplication7;
+package FLEXARRAY;
 
 import java.util.Scanner;
 
@@ -19,7 +19,6 @@ public class TestFlexArray {
         //Get elements of array
         for(int i=0; i<5; i++){
             System.out.println("Enter a number for index : " + i );
-            Scanner scan = new Scanner(System.in);
             anArrayTemp[i] = scan.nextInt();
         }
 
@@ -28,19 +27,20 @@ public class TestFlexArray {
         //Assign the elements of temporary array into new array
         FlexArray anArray01 = new FlexArray(anArrayTemp);
 
-        boolean trigger = true;
-        while(trigger){
-            System.out.println("Choose what you want from following options");
-            System.out.println("Display array : 1");
-            System.out.println("Insert a new value to the array : 2");
-            System.out.println("View array in ascending order : 3");
-            System.out.println("View array in descending order : 4");
-            System.out.println("Delete value by index : 5");
-            System.out.println("Delete value by value : 6");
-            System.out.println("Search index by value :7");
-            System.out.println("Update value by index :8");
+        // boolean trigger = true;
+        // while(trigger){
+            System.out.println("Choose what you want from following options\n");
+            System.out.println("Display array : 1\n");
+            System.out.println("Insert a new value to the array : 2\n");
+            System.out.println("View array in ascending order : 3\n");
+            System.out.println("View array in descending order : 4\n");
+            System.out.println("Delete value by index : 5\n");
+            System.out.println("Delete value by value : 6\n");
+            System.out.println("Search index by value :7\n");
+            System.out.println("Update value by index :8\n");
+            System.out.println("To Exit press any other key \n");
 
-        }
+        // }
        
         anArray01.display();
         System.out.println("\n");
