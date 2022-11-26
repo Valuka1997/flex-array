@@ -69,6 +69,15 @@ public class FlexArray {
         }
     }
 
+    // method to find a element in array by index
+    public void searchIndex(int searchKey) {
+            if (arr0.length < searchKey) {
+                System.out.println("Array size is less than the entered index");
+            } else {
+                System.out.println("Found" + arr0[searchKey] + "in index" + searchKey);
+            }
+        }
+
     // method to find a element in array by value
     public void search(int searchKey) {
         for (int i = 0; i < arr0.length; i++) {
@@ -76,7 +85,7 @@ public class FlexArray {
                 System.out.println("Found" + searchKey + "in index" + i);
                 break;
             } else if (i == arr0.length) {
-                System.out.println("Cound't find the value" + searchKey + "in index" + i);
+                System.out.println("Cound't find the value" + searchKey + "in array");
                 break;
             }
         }
