@@ -38,12 +38,11 @@ public class worker {
     System.out.println("View array in descending order : 11");
     System.out.println("Sort array in descending order : 12");
     System.out.println("To Exit Enter : E ");
+    System.out.println("To View menu again Enter : M ");
 
     boolean trigger = true;
 
     while (trigger) {
-
-      System.out.println("Enter your option\n");
 
       String opt = scn.nextLine();
 
@@ -125,7 +124,7 @@ public class worker {
           break;
 
         case "11":
-          System.out.println("Array is displayed in Asending Order\n");
+          System.out.println("Array is displayed in Desending Order\n");
           arr1.viewDes();
           break;
 
@@ -141,7 +140,8 @@ public class worker {
           trigger = false;
           break;
 
-        default:
+          case "m":
+          case "M":
           System.out.println("Choose what you want from following options\n");
           System.out.println("Display menu again enter any other key");
           System.out.println("Display array : 1");
@@ -157,6 +157,8 @@ public class worker {
           System.out.println("View array in descending order : 11");
           System.out.println("Sort array in descending order : 12");
           System.out.println("To Exit Enter : E ");
+          System.out.println("To View menu again Enter : M ");
+          break;
 
       }
 
