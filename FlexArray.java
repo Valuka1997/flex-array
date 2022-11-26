@@ -62,6 +62,19 @@ public class FlexArray {
         arr0[updateIndex] = updateValue;
     }
 
+    // method to update a value by value
+    public void updateVal(int toUpdated, int newValue) {
+        for (int i = 0; i < arr0.length; i++) {
+            if (arr0[i] == toUpdated) {
+                System.out.println("Found" + toUpdated + "in index" + i);
+                arr0[i] = newValue;
+            }
+            else{
+                System.out.println("Cound't find the value" + toUpdated + "in array");
+            }
+        }
+    }
+
     // method to display all the elements of array
     public void display() {
         for (int i = 0; i < arr0.length; i++) {
@@ -113,6 +126,26 @@ public class FlexArray {
         }
     }
 
+    //view array in ascending order
+    public void viewAsc() {
+
+        int [] arr1 = arr0;
+        // sort by using insertion sort
+        for (int mainLoop = 0; mainLoop < arr1.length; mainLoop++) {
+            int temp = arr1[mainLoop];
+            int searchLoop = mainLoop;
+            while (searchLoop > 0 && arr1[searchLoop - 1] >= temp) {
+                arr1[searchLoop] = arr1[searchLoop - 1];
+                searchLoop--;
+            }
+            arr1[searchLoop] = temp;
+        }
+        
+        for (int i = 0; i < arr1.length; i++) {
+            System.out.print(arr1[i] + "\t");
+        }
+    }
+
     // sort the array in decending order method
     public void sortDes() {
         // sort by using insertion sort
@@ -124,6 +157,24 @@ public class FlexArray {
                 searchLoop--;
             }
             arr0[searchLoop] = temp;
+        }
+    }
+
+    // View the array in decending order method
+    public void viewDes() {
+        int [] arr1 = arr0;
+        // sort by using insertion sort
+        for (int mainLoop = 1; mainLoop < arr1.length; mainLoop++) {
+            int temp = arr1[mainLoop];
+            int searchLoop = mainLoop;
+            while (searchLoop > 0 && arr1[searchLoop - 1] <= temp) {
+                arr1[searchLoop] = arr1[searchLoop - 1];
+                searchLoop--;
+            }
+            arr1[searchLoop] = temp;
+        }
+        for (int i = 0; i < arr1.length; i++) {
+            System.out.print(arr1[i] + "\t");
         }
     }
 }
