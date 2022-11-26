@@ -6,8 +6,8 @@ public class worker {
         System.out.println("Flexible array");
         System.out.println("________________");
         System.out.println("Enter the length of the array : ");
-        Scanner num = new Scanner(System.in);
-        int len = num.nextInt();
+        Scanner scn = new Scanner(System.in);
+        int len = scn.nextInt();
 
         // Create a temporary array for add elements
         int[] arrTmp = new int[len];
@@ -15,7 +15,7 @@ public class worker {
         // Get elements for array
         for (int i = 0; i < len; i++) {
             System.out.println("Enter a number for index : " + i);
-            arrTmp[i] = num.nextInt();
+            arrTmp[i] = scn.nextInt();
         }
 
         System.out.println("\n");
@@ -39,7 +39,8 @@ public class worker {
         System.out.println("Sort array in descending order : 12");
         System.out.println("To Exit press any other key");
 
-        Scanner opt = new Scanner(System.in);
+        String opt = scn.nextLine();
+
 
         boolean trigger = true;
         while(trigger){
@@ -73,7 +74,7 @@ public class worker {
         System.out.println("\n");
 
         System.out.println("Enter a insertValue:");
-        int insertValue = num.nextInt();
+        int insertValue = scn.nextInt();
         arr1.insert(insertValue);
         arr1.display();
         System.out.println("\n");
@@ -90,34 +91,34 @@ public class worker {
 
         // Calling the deleteByIndex method from flexArray class
         System.out.println("Enter a deleteIndex:");
-        int deleteIndex = num.nextInt();
+        int deleteIndex = scn.nextInt();
         arr1.deletByIndex(deleteIndex);
         arr1.display();
         System.out.println("\n");
 
         // Calling the deleteByValue method from flexArray class
         System.out.println("Enter a deleteValue:");
-        int deleteValue = num.nextInt();
+        int deleteValue = scn.nextInt();
         arr1.deletByValue(deleteValue);
         arr1.display();
         System.out.println("\n");
 
         // Calling the searchKey method from flexArray class
         System.out.println("Enter a searchKey:");
-        int searchKey = num.nextInt();
+        int searchKey = scn.nextInt();
         arr1.search(searchKey);
         System.out.println("\n");
 
         // Calling the update method from flexArray class
         System.out.println("Enter a updateValue:");
-        int updateValue = num.nextInt();
+        int updateValue = scn.nextInt();
         System.out.println("Enter a updateIndex:");
-        int updateIndex = num.nextInt();
+        int updateIndex = scn.nextInt();
         arr1.update(updateIndex, updateValue);
         arr1.display();
         System.out.println("\n");
 
         // close scanner
-        num.close();
+        scn.close();
     }
 }
