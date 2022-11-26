@@ -68,8 +68,7 @@ public class FlexArray {
             if (arr0[i] == toUpdated) {
                 System.out.println("Found" + toUpdated + "in index" + i);
                 arr0[i] = newValue;
-            }
-            else{
+            } else {
                 System.out.println("Cound't find the value" + toUpdated + "in array");
             }
         }
@@ -84,12 +83,12 @@ public class FlexArray {
 
     // method to find a element in array by index
     public void searchIndex(int searchKey) {
-            if (arr0.length < searchKey) {
-                System.out.println("Array size is less than the entered index");
-            } else {
-                System.out.println("Found" + arr0[searchKey] + "in index" + searchKey);
-            }
+        if (arr0.length < searchKey) {
+            System.out.println("Array size is less than the entered index");
+        } else {
+            System.out.println("Found" + arr0[searchKey] + "in index" + searchKey);
         }
+    }
 
     // method to find a element in array by value
     public void search(int searchKey) {
@@ -126,10 +125,10 @@ public class FlexArray {
         }
     }
 
-    //view array in ascending order
+    // view array in ascending order
     public void viewAsc() {
 
-        int [] arr1 = arr0;
+        int[] arr1 = arr0;
         // sort by using insertion sort
         for (int mainLoop = 0; mainLoop < arr1.length; mainLoop++) {
             int temp = arr1[mainLoop];
@@ -140,7 +139,7 @@ public class FlexArray {
             }
             arr1[searchLoop] = temp;
         }
-        
+
         for (int i = 0; i < arr1.length; i++) {
             System.out.print(arr1[i] + "\t");
         }
@@ -162,7 +161,7 @@ public class FlexArray {
 
     // View the array in decending order method
     public void viewDes() {
-        int [] arr1 = arr0;
+        int[] arr1 = arr0;
         // sort by using insertion sort
         for (int mainLoop = 1; mainLoop < arr1.length; mainLoop++) {
             int temp = arr1[mainLoop];
