@@ -1,6 +1,3 @@
-package FLEXARRAY;
-
-
 public class FlexArray {
         
     //Declare an array
