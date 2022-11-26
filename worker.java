@@ -6,7 +6,6 @@ public class worker {
         
         System.out.println("Flexible array");
         System.out.println("________________");
-        System.out.println("\n");
         System.out.println("Enter the length of the array : ");
         Scanner num = new Scanner(System.in);
         int len = num.nextInt();
@@ -45,7 +44,6 @@ public class worker {
         arr1.display();
         System.out.println("\n");
 
-        //Calling the insert method from flexArray class
         System.out.println("Enter a insertValue:" );
         int insertValue = num.nextInt();
         arr1.insert(insertValue);
@@ -94,6 +92,7 @@ public class worker {
         System.out.println("\n");
 
 
-
+        //close scanner
+        num.close();
     }
 }

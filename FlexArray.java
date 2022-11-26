@@ -8,15 +8,14 @@ public class FlexArray {
         this.arr0 = arr0;
     }
     
-    /*Creating a method to add a element to a array if there is a
-      position last*/
+    // method to add element to tail
     public void insert(int insertValue){
             this.increase();
             arr0[arr0.length - 1 ] = insertValue;
 
     }
     
-    // Creating a method to delete an element of array by using index
+    // method to delete an element of array by using index
     public void deletByIndex(int deleteIndex){
         // temporary array to hold values without deleted index
          int [] arrTmpDel = new int [arr0.length - 1];
@@ -31,7 +30,7 @@ public class FlexArray {
 
     }
     
-    // Creating a method to delete an element with it's value
+    // method to delete an element by it's value
     public void deletByValue(int deleteValue){
         for(int i=0; i<arr0.length; i++){
             if(arr0[i] == deleteValue){
@@ -56,12 +55,12 @@ public class FlexArray {
         }
     }
    
-    // Creating a method to update a value of an element in array
+    // method to update a value by index
    public void update(int updateIndex, int updateValue){
        arr0[updateIndex] = updateValue;
    }
      
-    //Creating a method to display all the elements of array
+    // method to display all the elements of array
     public void display(){
         for(int i=0; i<arr0.length; i++){
             System.out.print(arr0[i] + "\t"); 
@@ -69,7 +68,7 @@ public class FlexArray {
     }
     
     
-    //Creating a method to find a element in array
+    // method to find a element in array by value
     public void search(int searchKey){
         for(int i=0; i<arr0.length; i++){
             if(arr0[i] == searchKey){
@@ -82,41 +81,40 @@ public class FlexArray {
             }
         }
     }
-    //method of sorting  all the items of the array in ascending order
     
     
-    //Creating a method to increase the array size for insert values
+    // method to increase the array size by 1
     public void increase(){
         int[] arr0Temp = new int[arr0.length + 1];
         System.arraycopy(arr0, 0, arr0Temp, 0, arr0.length);
         arr0 = arr0Temp;
     }
 
-    //sort the array in acending order method
+    // method of sorting  all the items of the array in ascending order
     public void sortAsc(){
        
         //sort by using insertion sort
         for (int mainLoop = 0; mainLoop < arr0.length; mainLoop++) {
-            int temp = arr0[mainLoop];   //remove the value
-            int searchLoop=mainLoop;    //start from main loop
+            int temp = arr0[mainLoop];   
+            int searchLoop=mainLoop;    
             while (searchLoop>0 && arr0[searchLoop-1] >= temp) {
-                arr0[searchLoop]=arr0[searchLoop-1];  //shifting to right
+                arr0[searchLoop]=arr0[searchLoop-1];  
                 searchLoop--;
             }
-            arr0[searchLoop] = temp; //insert the value in relevent place
+            arr0[searchLoop] = temp; 
         }
     }
     //sort the array in decending order method
     public void sortDes(){
         //sort by using insertion sort
         for (int mainLoop = 1; mainLoop < arr0.length; mainLoop++) {
-            int temp = arr0[mainLoop];  //remove the value
-            int searchLoop=mainLoop;    //start from main loop
+            int temp = arr0[mainLoop]; 
+            int searchLoop=mainLoop;   
             while (searchLoop>0 && arr0[searchLoop-1] <= temp) {
-                arr0[searchLoop]=arr0[searchLoop-1]   ;//shifting to right
+                arr0[searchLoop]=arr0[searchLoop-1]   ;
                 searchLoop--;
             }
-            arr0[searchLoop] = temp;//insert the value in relevent place
+            arr0[searchLoop] = temp;
         }
     }
 }   
